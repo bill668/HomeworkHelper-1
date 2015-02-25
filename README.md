@@ -1,8 +1,8 @@
 # HomeworkHelper
 Application Design - Class Project
 
-#Install bootstrap
-Install routing for two collections
-        Tasks
-        Subtasks
-Install hammer
+#Initial Commit - 2/25/2015
+- Created Initial Project
+- Added Bootstrap 3 Package
+- Added Routing Package
+- Added Hammer.js Package
