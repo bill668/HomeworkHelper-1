@@ -7,6 +7,13 @@ Application Design - Class Project
 - Ming / ming.yu@loop.colum.edu / 352-678-7861
 - Clayton / clayton.haddock@loop.colum.edu / 269-487-8587
 
+#Added In Tasks - 3/2/2015 
+
+- Restructured Project Folder
+- Added in Tasks files
+- Created the ability to make Tasks
+- Removed Routing Package
+
 #Initial Commit - 2/25/2015
 - Created Initial Project
 - Added Bootstrap 3 Package

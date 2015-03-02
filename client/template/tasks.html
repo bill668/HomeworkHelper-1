@@ -1,0 +1,8 @@
+<template name="tasks">
+    <ul>
+        <li><input class="task-name" placeholder="Homework"></li>
+        {{#each tasks}}
+        <li>{{taskName}}</li>
+        {{/each}}
+    </ul>
+</template>
