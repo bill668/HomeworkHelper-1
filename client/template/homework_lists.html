@@ -1,0 +1,16 @@
+<template name="lists">
+    <!-- BUTTON FOR CREATING NEW TASK -->
+    <button type="button" class="btn btn-default" id="add-new-list">Add New +</button>
+    <div class="clear"></div>
+    <!-- LIST OF TASKS -->
+    <ul>
+        {{#each lists}}
+            {{>items}}
+        {{/each}}
+        <span class="clear"></span>
+    </ul>
+</template>
+
+<template name="items">
+    <li class="well clearfix"><a href="#"><div class="left">{{name}}</div><div class="right">{{date}}</div></a></li>
+</template>

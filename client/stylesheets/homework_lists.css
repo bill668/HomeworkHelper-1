@@ -1,0 +1,29 @@
+#add-new-list{
+    float: right;
+    margin-bottom: 15px;
+}
+
+ul{
+    padding-left: 0px;   
+}
+
+ul li{
+    list-style-type: none;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;   
+}
+
+.clear{
+    clear: both;
+}
+
+.clearfix {
+	overflow: auto;
+	zoom: 1;
+}

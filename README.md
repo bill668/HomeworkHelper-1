@@ -7,6 +7,12 @@ Application Design - Class Project
 - Ming / ming.yu@loop.colum.edu / 352-678-7861
 - Clayton / clayton.haddock@loop.colum.edu / 269-487-8587
 
+# Added In Modal To Add Tasks (Shows Task Title and Date) - 3/3/2015
+
+- Added mizzia:bootboxjs to handle pop up dialogs
+- Added rajit:bootstrap3-datepicker to handle date input
+- First Screen Mockup Now Functional
+
 #Added In Tasks - 3/2/2015 
 
 - Restructured Project Folder
