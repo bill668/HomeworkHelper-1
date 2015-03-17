@@ -1,15 +1,25 @@
-Template.lists.events({
-    /*'keyup .list-name':function(evt, tmpl) {
-        if(evt.which === 13){
-            var listName = tmpl.find('.list-name').value;
-            Lists.insert({listName:listName});
-        }
-    }*/
+Template.list.events({
+    'click .list-name':function(evt, tmpl){
+         // name
+                            var name = $('#name').val();
+                            // date
+                            var date = $('#datepicker').val();
+                            //Lists.insert({name:name, date:date});
+                            console.log({name:name, date:date});
+                            
+                            var task = {
+                                url: name,
+                                title: name
+                            };
+                            
+                            post._id = List.insert(post);
+                            //Router.go('task', post);   
+    }
 });
 
-Template.lists.helpers({
+Template.list.helpers({
     lists: function() {
-        return Lists.find();
+        return List.find();
     }
 });
 
@@ -51,6 +61,7 @@ $(document).on("click", "#add-new-list", function(e) {
                             var date = $('#datepicker').val();
                             Lists.insert({name:name, date:date});
                             console.log({name:name, date:date});
+                       
                         }
                     }
                 }

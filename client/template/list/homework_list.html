@@ -1,0 +1,19 @@
+<!-- DECLARE TEMPLATE NAME AS LIST -->
+<template name="list">
+    <!-- BUTTON FOR CREATING NEW TASK -->
+    <button type="button" class="btn btn-default" id="add-new-list">Add New +</button>
+    <div class="clear"></div>
+    <!-- LIST OF LISTS -->
+    <ul>
+        {{#each list}}
+            {{>listItem}}
+        {{/each}}
+        <span class="clear"></span>
+    </ul>
+</template>
+
+<!-- DECLARE TEMPLATE NAME AS LISTITEM -->
+<template name="listItem">
+    <!-- INDIVIDUAL LIST ITEM -->
+    <li class="well clearfix"><a href="{{pathFor 'task'}}"><div class="left">{{name}}</div><div class="right">{{date}}</div></a></li>
+</template>
