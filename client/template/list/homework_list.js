@@ -1,71 +1,26 @@
 Template.list.events({
-    'click .list-name':function(evt, tmpl){
-         // name
-                            var name = $('#name').val();
-                            // date
-                            var date = $('#datepicker').val();
-                            //Lists.insert({name:name, date:date});
-                            console.log({name:name, date:date});
-                            
-                            var task = {
-                                url: name,
-                                title: name
-                            };
-                            
-                            post._id = List.insert(post);
-                            //Router.go('task', post);   
+    'click .create-list':function(evt, tmpl){
+        var name = $('#name').val();                // name input box value
+        var description = $('#description').val();    // description input box value
+        var date = $('#datepicker').val();          // date input box value
+        var task = {
+            url: name,
+            title: name,
+            description: description,
+            date: date
+        }
+        console.log({name:name, date:date});
+        console.log(task);
+        task._id = List.insert(task);
     }
 });
 
 Template.list.helpers({
-    lists: function() {
+    list: function() {
         return List.find();
     }
 });
 
-$(document).on("click", "#add-new-list", function(e) {
-    bootbox.dialog({
-                title: "Create a New List",
-                message: '<div class="row">  ' +
-                            '<div class="col-md-12"> ' +
-                                '<form class="form-horizontal"> ' +
-                                    '<div class="form-group"> ' +
-                                        '<label class="col-md-4 control-label" for="name">List Name</label> ' +
-                                        '<div class="col-md-4"> ' +
-                                            '<input id="name" name="name" type="text" placeholder="List Name" class="form-control input-md"> ' +
-                                        '</div> ' +
-                                    '</div> ' +
-                                    '<div class="form-group"> ' +
-                                        '<label class="col-md-4 control-label" for="description">Description</label> ' +
-                                        '<div class="col-md-4"> ' +
-                                            '<input id="description" name="description" type="text" placeholder="Description" class="form-control input-md"> ' +
-                                        '</div> ' +
-                                    '</div> ' +
-                                    '<div class="form-group"> ' +
-                                        '<label class="col-md-4 control-label" for="description">Due Date</label> ' +
-                                        '<div class="col-md-4"> ' +
-                                            '<input type="text" class="form-control" id="datepicker">' +
-                                        '</div> ' +
-                                    '</div> ' +
-                                '</form>' +
-                            '</div>' +
-                        '</div>',
-                buttons: {
-                    success: {
-                        label: "Create",
-                        className: "btn-success",
-                        callback: function () {
-                            // name
-                            var name = $('#name').val();
-                            // date
-                            var date = $('#datepicker').val();
-                            Lists.insert({name:name, date:date});
-                            console.log({name:name, date:date});
-                       
-                        }
-                    }
-                }
-            }
-        );
+$( document ).ready(function() {
     $('#datepicker').datepicker();
 });

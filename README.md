@@ -7,10 +7,15 @@ Application Design - Class Project
 - Ming / ming.yu@loop.colum.edu / 352-678-7861
 - Clayton / clayton.haddock@loop.colum.edu / 269-487-8587
 
-# Added in Routing
+# Organized Project and Added New Packages - 3/16/2015
 
 - Added iron:router package for routing
 - Added initial templates for routing setup
+- Removed mizzio:bootboxjs
+- Fixed up routing so it goes to each individual task page
+- Cleaned up coding
+- Creat edit page with functional features
+- Added delete option
 
 # Added In Modal To Add Tasks (Shows Task Title and Date) - 3/3/2015
 

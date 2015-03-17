@@ -1,13 +1,13 @@
 <template name="task">
-    <h3>TASKSSSS</h3>
     <!-- BUTTON FOR CREATING NEW TASK -->
-    <button type="button" class="btn btn-default" id="add-new-list">Add New +</button>
+    <a href="{{pathFor 'listEdit'}}"><button type="button" class="btn btn-default" id="edit-list">Edit</button></a>
     <div class="clear"></div>
-    <!-- LIST OF TASKS -->
-    <ul>
-        {{#each task}}
-            <li>s</li>
-        {{/each}}
-        <span class="clear"></span>
-    </ul>
+    <div class="well">
+        <!-- ASSIGNMENT TITLE -->
+        <h3 class="left">{{title}}</h3>
+        <h3 class="right">{{date}}</h3>
+        <div class="clear"></div>
+        <p>{{description}}</p>
+    </div>
+    <button type="button" class="btn btn-default delete-list">Delete</button>
 </template>
