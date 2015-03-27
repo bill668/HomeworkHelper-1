@@ -1,6 +1,6 @@
 <template name="task">
     <!-- BUTTON FOR CREATING NEW TASK -->
-    <a href="{{pathFor 'listEdit'}}"><button type="button" class="btn btn-default" id="edit-list">Edit</button></a>
+    <a href="{{pathFor 'listEdit'}}">
     <div class="clear"></div>
     <div class="well">
         <!-- ASSIGNMENT TITLE -->
@@ -10,4 +10,6 @@
         <p>{{description}}</p>
     </div>
     <button type="button" class="btn btn-default delete-list">Delete</button>
+    <button type="button" class="btn btn-default" id="edit-list">Edit</button>
+    </a>
 </template>

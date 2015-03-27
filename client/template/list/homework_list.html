@@ -5,13 +5,15 @@
     <!-- BUTTON END -->
     <div class="clear"></div>
     <!-- MODAL FOR ADDING NEW TASK -->
-    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="fa">
+    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="false">
         <div class="modal-dialog">
             <div class="modal-content">
+
                 <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                 <h4 class="modal-title" id="myModalLabel">Modal title</h4>
                 </div>
+
                 <div class="modal-body">
                     <form class="form-horizontal">
                         <div class="form-group">
@@ -25,22 +27,24 @@
                             <label class="col-md-4 control-label" for="description">Description</label>
                             <div class="col-md-4">
                                 <!-- LIST DESCRIPTION -->
-                                <input id="description" name="description" type="text" placeholder="Description" class="form-control input-md">
+                                <input id="description" type="text" placeholder="description" class="form-control input-md">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="description">Due Date</label>
                             <div class="col-md-4">
                                 <!-- LIST DATE -->
-                                <input type="text" class="form-control" id="datepicker" placeholder="MM/DD/YYYY">
+                                <input type="text" class="form-control input-md" id="datepicker" placeholder="MM/DD/YYYY">
                             </div>
                         </div>
                     </form>
                 </div>
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary create-list" data-dismiss="modal">Create</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 </div>
+
             </div>
         </div>
     </div>

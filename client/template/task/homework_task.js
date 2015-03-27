@@ -6,7 +6,7 @@ Template.task.events({
 });
 
 Template.task.helpers({
-    task: function() {
-        return List.find({postId:this._id});
-    }
+//    task: function() {
+//        return List.find({postId:this._id});
+//    }
 });

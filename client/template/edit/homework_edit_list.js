@@ -29,7 +29,7 @@ Template.listEdit.events({
 
 
 Template.listEdit.helpers({
-    task: function() {
-        return List.find({postId:this._id});
-    }
+//    task: function() {
+//        return List.find({postId:this._id});
+//    }
 });
