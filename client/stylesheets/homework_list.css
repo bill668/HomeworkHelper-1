@@ -2,3 +2,8 @@
     float: right;
     margin-bottom: 15px;
 }
+
+.selected{
+
+	background-color: yellow;
+}

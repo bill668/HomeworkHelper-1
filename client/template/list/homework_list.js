@@ -9,15 +9,43 @@ Template.list.events({
             description: description,
             date: date
         }
-        console.log({name:name, date:date});
-        console.log(task);
-        task._id = List.insert(task);
+        // make sure user unless enter project name
+        if (name === ''){
+            console.log('You have to enter a project name!');
+        }
+        else {
+            task._id = List.insert(task);
+        }
+    },
+
+    // Track when project selected
+    'click li.projectElement': function(){
+        var ListId = this._id;
+        Session.set('selectedProject', ListId);
+    },
+
+    'click #removeButton': function(){
+        var selectedProject = Session.get('selectedProject');
+        List.remove(selectedProject);
     }
+
 });
 
 Template.list.helpers({
     list: function() {
         return List.find();
+    }
+});
+
+// When project selected, change its background color to yellow
+// by add a selected class
+Template.listItem.helpers({
+    'selectedClass': function() {
+        var ListId = this._id;
+        var selectedProject = Session.get('selectedProject');
+        if (ListId === selectedProject){
+            return 'selected'
+        }
     }
 });
 

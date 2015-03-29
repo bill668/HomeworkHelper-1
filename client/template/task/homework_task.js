@@ -3,10 +3,14 @@ Template.task.events({
         List.remove(this._id);
         Router.go('list');
     },
+
+    'click .BackList':function(evt,tmpl){
+    	Router.go('list');
+    }
 });
 
 Template.task.helpers({
-//    task: function() {
-//        return List.find({postId:this._id});
-//    }
+    task: function() {
+        return List.find({postId:this._id});
+    }
 });

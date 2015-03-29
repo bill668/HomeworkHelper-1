@@ -56,10 +56,17 @@
         {{/each}}
         <span class="clear"></span>
     </ul>
+
+    <!-- Add remove all project button-->
+    <ul>
+        <div class="remove">
+             <button type="button" class="" id='removeButton' data-dismiss="modal">Remove Project</button>
+        </div>
+    </ul>
 </template>
 
 <!-- DECLARE TEMPLATE NAME AS LISTITEM -->
 <template name="listItem">
     <!-- INDIVIDUAL LIST ITEM -->
-    <li class="well clearfix"><a href="{{pathFor 'task'}}"><div class="left">{{title}}</div><div class="right">{{date}}</div></a></li>
+    <li class="well clearfix projectElement {{selectedClass}}"><a href="{{pathFor 'task'}}"><div class="left">{{title}}</div><div class="right">{{date}}</div></a></li>
 </template>
