@@ -3,15 +3,29 @@ Template.list.events({
         var name = $('#name').val();                // name input box value
         var description = $('#description').val();    // description input box value
         var date = $('#datepicker').val();          // date input box value
+        var shortDescription; 
+
+        // shortDescription
+        if (description.length > 30 ){
+            shortDescription = description.substring(0,30) + '...';
+        } else{
+            shortDescription = description;
+        }
+        
+        // create database for List item.
         var task = {
             url: name,
             title: name,
             description: description,
+            shortDescription: shortDescription,
             date: date
         }
+
+
+
         // make sure user unless enter project name
         if (name === ''){
-            console.log('You have to enter a project name!');
+            alert('You have to enter a project name!');
         }
         else {
             task._id = List.insert(task);

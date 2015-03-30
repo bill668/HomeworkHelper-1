@@ -68,5 +68,11 @@
 <!-- DECLARE TEMPLATE NAME AS LISTITEM -->
 <template name="listItem">
     <!-- INDIVIDUAL LIST ITEM -->
-    <li class="well clearfix projectElement {{selectedClass}}"><a href="{{pathFor 'task'}}"><div class="left">{{title}}</div><div class="right">{{date}}</div></a></li>
+    <li class="well clearfix projectElement {{selectedClass}}">
+        <a href="{{pathFor 'task'}}">
+            <div class="left">{{title}}</div>
+            <div class="center">{{shortDescription}}</div>
+            <div class="right">{{date}}</div>
+        </a>
+    </li>
 </template>
