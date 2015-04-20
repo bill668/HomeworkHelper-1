@@ -1,34 +1,14 @@
 Template.list.events({
     'click .create-list':function(evt, tmpl){
-        var name = $('#name').val();                // name input box value
-        var description = $('#description').val();    // description input box value
-        var date = $('#datepicker').val();          // date input box value
-        var shortDescription; 
-
-        // shortDescription
-        if (description.length > 30 ){
-            shortDescription = description.substring(0,30) + '...';
-        } else{
-            shortDescription = description;
-        }
-        
         // create database for List item.
-        var task = {
-            url: name,
-            title: name,
-            description: description,
-            shortDescription: shortDescription,
-            date: date
-        }
-
-
+        var task = formHelpers.getTaskData();
 
         // make sure user unless enter project name
-        if (name === ''){
+        if (task.name === ''){
             alert('You have to enter a project name!');
         }
         else {
-            task._id = List.insert(task);
+            List.insert(task);
         }
     },
 
@@ -59,6 +39,14 @@ Template.listItem.helpers({
         var selectedProject = Session.get('selectedProject');
         if (ListId === selectedProject){
             return 'selected'
+        }
+    },
+    // 4/20/2015 Ming: why briefDescription doesn't need ''?
+    briefDescription: function() {
+        if (this.description.length > 30) {
+            return this.description.substring(0, 30) + '...';
+        } else {
+            return this.description;
         }
     }
 });

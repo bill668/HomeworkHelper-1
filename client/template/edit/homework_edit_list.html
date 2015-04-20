@@ -26,5 +26,8 @@
     </form>           
     <!-- FORM END -->
     <button type="button" class="btn btn-primary save-list">Save</button>
-    <button type="button" class="btn btn-default cancel-edit-list">Cancel</button>
+    <!-- 4/20/15 Ming: use iron-router instead of button, and good to know it actually looks like a button on html -->
+         {{#linkTo route='task' class='btn btn-default'}}
+            Cancel
+         {{/linkTo}}
 </template>

@@ -4,7 +4,10 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand mainButton" id="mainButton">
+                <!-- Ming 4/20/15: using iron-routers instead of click button jump to the list page -->
+                 {{#linkTo route='list' class='navbar-brand'}}
                     Homework Helper
+                 {{/linkTo}}
                 </a>
             </div>
         </div>
