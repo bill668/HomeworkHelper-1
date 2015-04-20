@@ -1,16 +1,16 @@
 <template name="task">
     <!-- BUTTON FOR CREATING NEW TASK -->
-    <a href="{{pathFor 'listEdit'}}">
+    <button type="button" class="btn btn-default" id="back-list">Back to List</button>
     <div class="clear"></div>
     <div class="well">
         <!-- ASSIGNMENT TITLE -->
-        <h3 class="left">{{title}}</h3>
-        <h3 class="right">{{date}}</h3>
+        <h3 class="left {{done}}">{{title}}</h3>
+        <h3 class="right {{done}}">{{date}}</h3>
         <div class="clear"></div>
-        <p>{{description}}</p>
+        <br />
+        <p class="{{done}}">{{description}}</p>
     </div>
-    <button type="button" class="btn btn-default" id="edit-list">Edit</button>
-    </a>
-    <button type="button" class="btn btn-default delete-list">Delete</button>
-    <button type="button" class="btn btn-default BackList">Back to List</button>
+    <button type="button" class="btn btn-default" id="delete-list">Delete</button>
+    <a href="{{pathFor 'listEdit'}}"><button type="button" class="btn btn-default" id="edit-list">Edit</button></a>
+    <button type="button" class="btn btn-default" id="done-list" data-complete="{{done}}">Done</button>
 </template>
