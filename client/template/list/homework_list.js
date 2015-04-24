@@ -15,21 +15,23 @@ Template.list.events({
         }
         
         else {
+
             List.insert(task);
             successBox.removeClass('hidden');
             if(!warningBox.hasClass('hidden')) {
                 warningBox.addClass('hidden');   
             }
             // clear inputs
-            name.val('');
-            description.val('');
-            date.val('');
+            $('#name').val('');
+            $('#datepicker').val('');
+            $('#description').val('');
         }
     }
 });
 
 Template.list.helpers({
     list: function() {
-        return List.find();
+        var currentUserId = Meteor.userId();
+        return List.find( { createdBy: currentUserId}, {});
     }
 });

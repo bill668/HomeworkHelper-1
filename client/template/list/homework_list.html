@@ -51,6 +51,7 @@ DESCRIPTION: This template displays all the lists added into the database.
     </div>
     <!-- MODAL END -->
     <!-- LIST OF LISTS -->
+    {{#if currentUser}}
     <ul>
         <div class="alert alert-danger hidden" role="alert">
             <p>* Please fill in all the required fields!</p>
@@ -63,6 +64,7 @@ DESCRIPTION: This template displays all the lists added into the database.
         {{/each}}
         <span class="clear"></span>
     </ul>
+    {{/if}}
 </template>
 
 <!-- DECLARE TEMPLATE NAME AS LISTITEM -->

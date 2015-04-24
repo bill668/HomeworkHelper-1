@@ -9,10 +9,11 @@ formHelpers = {
 		var name = $('#name').val();                // name input box value
 		var description = $('#description').val();    // description input box value
 		var date = $('#datepicker').val();          // date input box value
-
+		var currentUserId = Meteor.userId();
 		
 		// send back a premade object
 		return {
+			createdBy: currentUserId,
 		    url: name,
 		    title: name,
 		    description: description,
@@ -20,4 +21,4 @@ formHelpers = {
 		    done: 'incomplete'
 		};
 	}
-};
+}; 
